@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h1>お問い合わせ情報入力</h1>
+  <!--
+    ※ 重要
+    formタグとPHPプログラム
+    inputタグとPHPプログラム
+   -->
+  <form method="POST" action="check.php">
+  <!--
+    methodはGETかPOSTを指定 - 送信方法を決める
+    POSTなら、送信先のファイルで$_POSTという変数に値が入る
+    GETなら、送信先のファイルで$_GETという変数に値が入る
+
+    actionはデータの送信先ファイルを指定
+   -->
+
+    <!-- 実際に画面に出力される入力欄 -->
+    <!-- ニックネーム<br> -->
+    <input type="text" name="nickname" placeholder="ニックネーム"><br>
+    <input type="text" name="email" placeholder="メールアドレス"><br>
+    <!-- <input type="text" name="content" placeholder="お問い合わせ内容"><br> -->
+    <textarea name="content" placeholder="お問い合わせ内容"></textarea><br>
+    <!--
+      nameは各inputタグに付けられた名前
+      他のinputタグと被ってはいけない
+      nameの値が、送信先データのキーになる
+     -->
+
+    <!-- 送信ボタンもinputタグで作成 -->
+    <input type="submit" value="確認画面へ">
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
