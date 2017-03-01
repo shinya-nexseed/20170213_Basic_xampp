@@ -19,6 +19,7 @@ $data = array($_POST['nickname'],$_POST['email'],$_POST['content']);
 
 $stmt = $dbh->prepare($sql); // SQL文を実行するための準備
 $stmt->execute($data); // 実行
+
 // 実行の際、Read処理なら$stmtに取得した結果が入る
 
 // INSERT文 Create データの作成
